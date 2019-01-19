@@ -39,7 +39,7 @@ describe('KbnLoginForm', () => {
 
           describe('メールアドレス形式のフォーマット', () => {
             it('validation.email.formatがvalidであること', () => {
-              loginForm.setData({ email: 'foo[domain.com' })
+              loginForm.setData({ email: 'foo@domain.com' })
               expect(loginForm.vm.validation.email.format).to.equal(true)
             })
           })
