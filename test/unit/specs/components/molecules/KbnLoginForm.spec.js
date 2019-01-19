@@ -192,8 +192,8 @@ describe('KbnLoginForm', () => {
                         const authInfo = onloginStub.args[0][0]
                         expect(authInfo.email).to.equal(loginForm.vm.email)
                         expect(authInfo.password).to.equal(loginForm.vm.password)
-                        loginForm.vm.$nextTick(() => {  // resolve内での状態の反映
-                            expect(loginForm.vm.error).to.equal('')  // エラーメッセージは初期化のまま
+                        loginForm.vm.$nextTick(() => {
+                            expect(loginForm.vm.error).to.equal('login error!')  // エラーメッセージ
                             expect(loginForm.vm.disableLoginAction).to.equal(false)  // ログインアクションは可能
                             done()
                         })
